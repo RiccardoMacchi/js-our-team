@@ -16,6 +16,7 @@ body {
     margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -50,4 +51,22 @@ body {
 
 #our_team h1 {
     margin-bottom: 10px;
+}
+
+/* MEDIA QUERY CELL */
+
+@media screen and (max-width:568px) {
+    *{
+        font-size: 0.8rem;
+    }
+    .my_box {
+        width: calc((100% / 2) - 20px);
+    }
+    .my_box h3{
+        font-size: 1rem;
+    }
+    #our_team h1 {
+        font-size: 1.3rem;
+    }
+
 }
