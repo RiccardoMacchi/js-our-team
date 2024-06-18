@@ -35,3 +35,12 @@ const membTeam = [
 ]
 
 console.log(membTeam)
+
+// Stampa di ogni singolo oggetto
+
+for (let i = 0; i < membTeam.length; i++) {
+    let singleMemb = membTeam[i]
+    for (let key in singleMemb){
+        console.log(singleMemb[key])
+    }
+}
