@@ -45,17 +45,19 @@ console.log(membTeam)
 for (let i = 0; i < membTeam.length; i++) {
     let singleMemb = membTeam[i];
     console.log(singleMemb);
+    // Creazione di una div per ogni serie di dato e img
+    let myBox = document.createElement("div");
+    myBox.className = "my_box";
+    container.append(myBox);
     for (let key in singleMemb){
         let singleMembData = singleMemb[key];
-        let myBox = document.createElement("div");
-        myBox.className = "my_box";
-        container.append(myBox)
+        // Condizione per stampare img o testo
         if (key === "image") {
             let img = new Image();
             img.src = `img/${singleMembData}`;
-            myBox.appendChild(img);
+            myBox.prepend(img);
         } else {
-            myBox.innerHTML = `<h3>${singleMembData}</h3>`
+            myBox.innerHTML += `<h3>${singleMembData}</h3>`
         }
     }
 }

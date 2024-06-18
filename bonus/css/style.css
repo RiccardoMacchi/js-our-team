@@ -1,0 +1,53 @@
+/* Regole Generali */
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #f5f5f1;
+    text-align: center;
+    color: #635d55;
+}
+
+#container {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#container img {
+    width: 100%;
+}
+
+/* Regole my box */
+.my_box {
+    width: calc((100% / 3) - 20px);
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.my_box h3 {
+    margin: 5px auto;
+    font-weight: 500;
+}
+
+.my_box h3:last-child {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+/* Regole titolo */
+
+#our_team{
+    padding: 30px 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#our_team h1 {
+    margin-bottom: 10px;
+}
