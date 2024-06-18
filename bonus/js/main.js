@@ -1,3 +1,7 @@
+// Recupero elementi in pagina
+const container =  document.getElementById("container")
+
+
 // Creazione arrey oggetti
 
 const membTeam = [
@@ -39,9 +43,19 @@ console.log(membTeam)
 // Stampa di ogni singolo oggetto
 
 for (let i = 0; i < membTeam.length; i++) {
-    let singleMemb = membTeam[i]
-    console.log(singleMemb)
+    let singleMemb = membTeam[i];
+    console.log(singleMemb);
     for (let key in singleMemb){
-        console.log(singleMemb[key])
+        let singleMembData = singleMemb[key];
+        let myBox = document.createElement("div");
+        myBox.className = "my_box";
+        container.append(myBox)
+        if (key === "image") {
+            let img = new Image();
+            img.src = `img/${singleMembData}`;
+            myBox.appendChild(img);
+        } else {
+            myBox.innerHTML = `<h3>${singleMembData}</h3>`
+        }
     }
 }
